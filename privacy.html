@@ -14,48 +14,97 @@
   </header>
 
   <h1>Нууцлалын бодлого</h1>
-  <p class="date">Сүүлд шинэчилсэн / Last updated: 2026-07-17</p>
+  <p class="date">Сүүлд шинэчилсэн / Last updated: 2026-09-25 (хувилбар 1.1)</p>
 
   <div class="card">
-    <p><strong>GoGlobal апп нь хэрэглэгчийн ямар ч хувийн мэдээллийг цуглуулдаггүй,
-    хадгалдаггүй, гуравдагч этгээдэд дамжуулдаггүй.</strong></p>
-    <h2>Дэлгэрэнгүй</h2>
+    <p>GoGlobal апп нь таны бүртгэл болон профайлыг найдвартай хадгалахын тулд
+    Google-ийн <strong>Firebase</strong> (Firebase Authentication, Cloud Firestore)
+    үйлчилгээг ашигладаг. Мэдээллийг зөвхөн аппын үйлчилгээг үзүүлэхэд ашиглана;
+    <strong>худалддаггүй, зар сурталчилгаа болон tracking хийдэггүй.</strong></p>
+
+    <h2>Бид ямар мэдээлэл хадгалдаг вэ</h2>
     <ul>
-      <li><strong>Бүртгэл:</strong> Аппын нэвтрэх/бүртгүүлэх дэлгэц нь одоогоор танилцуулга
-        зорилготой бөгөөд оруулсан мэдээлэл ямар ч серверт илгээгддэггүй. Бодит бүртгэл
-        (данс) үүсдэггүй тул серверт устгах мэдээлэл байдаггүй.</li>
-      <li><strong>Профайл зураг:</strong> Таны сонгосон зураг зөвхөн төхөөрөмж дээрээ
-        ашиглагдана; хаашаа ч илгээгддэггүй.</li>
-      <li><strong>Тохиргоо:</strong> Харанхуй горим зэрэг тохиргоо зөвхөн таны төхөөрөмж
-        дээр хадгалагдана.</li>
-      <li><strong>AI зөвлөх:</strong> Хариултууд нь апп дотор урьдчилан бэлтгэгдсэн агуулга
-        бөгөөд таны асуулт гадагш илгээгддэггүй.</li>
-      <li><strong>Интернэт ашиглалт:</strong> Зөвхөн олон нийтэд нээлттэй зургуудыг
-        (их сургуулиудын зураг гэх мэт) татаж харуулдаг.</li>
-      <li><strong>Tracking, зар сурталчилгаа, аналитик:</strong> Байхгүй.</li>
+      <li><strong>Бүртгэл:</strong> и-мэйл хаяг, нууц үг (нууц үгийг Firebase шифрлэн
+        хадгалдаг — бид харах боломжгүй), хэрэглэгчийн дотоод ID.</li>
+      <li><strong>Профайл (өөрөө бөглөсөн тохиолдолд):</strong> нэр, утасны дугаар, төрсөн
+        огноо, оршин суугаа газар, боловсролын түвшин, сургууль, голч дүн, хэлний түвшин,
+        сонирхсон мэргэжил, профайл зураг (жижигрүүлсэн хувилбар).</li>
+      <li><strong>Аппын ашиглалт:</strong> хадгалсан сургуулиуд, илгээсэн өргөдөл (маягтад
+        оруулсан мэдээлэлтэй хамт), түвшин тогтоох тестийн дүн, GG оноо.</li>
+      <li><strong>Зөвхөн таны төхөөрөмж дээр:</strong> харанхуй горим, хэл, харьцуулах
+        жагсаалт, «Материал илгээх» хэсэгт нэмсэн зургууд.</li>
     </ul>
+
+    <h2>Юунд ашигладаг вэ</h2>
+    <ul>
+      <li>Нэвтрэх, профайл болон GG оноогоо төхөөрөмж хооронд хадгалах.</li>
+      <li>Таны илгээсэн өргөдлийн дагуу GoGlobal-ийн зөвлөх тантай холбогдох.</li>
+      <li>Нууц үг сэргээх, и-мэйл баталгаажуулах зэрэг бүртгэлийн мэдэгдэл илгээх.</li>
+    </ul>
+
+    <h2>Хэнтэй хуваалцдаг вэ</h2>
+    <ul>
+      <li><strong>Google Firebase</strong> — мэдээлэл хадгалах үйлчилгээ үзүүлэгч
+        (Google Cloud, Өмнөд Солонгос — Сөүлийн бүс).</li>
+      <li><strong>GoGlobal зөвлөхүүд</strong> — зөвхөн таны илгээсэн өргөдлийг хариуцан
+        ажиллахад.</li>
+      <li>Таны зөвшөөрөлгүйгээр их сургууль болон бусад гуравдагч этгээдэд
+        дамжуулахгүй.</li>
+    </ul>
+
+    <h2>Аюулгүй байдал</h2>
+    <p>Бүх холболт шифрлэгдсэн (HTTPS/TLS), серверт хадгалагдах мэдээлэл шифрлэгдсэн.
+    Хандалтын дүрмээр хэрэглэгч бүр зөвхөн өөрийн мэдээллийг харах, засах боломжтой.</p>
+
     <h2>Мэдээлэл устгах</h2>
-    <p>Апп бүх мэдээллээ зөвхөн таны төхөөрөмж дээр хадгалдаг тул аппыг устгахад
-    түүнтэй холбоотой бүх мэдээлэл бүрэн устана. Серверт хадгалагдсан мэдээлэл байхгүй.</p>
+    <p>Апп доторх <strong>Профайл → Тохиргоо → Бүртгэл устгах</strong> хэсгээс нууц
+    үгээ оруулж бүртгэл болон түүнтэй холбоотой бүх мэдээллийг (профайл, GG оноо,
+    өргөдөл, тестийн түүх) шууд, бүрмөсөн устгах боломжтой. Мөн <strong>me@ember.mn</strong>
+    хаягаар хүсэлт илгээж болно.</p>
+
+    <h2>Бусад</h2>
+    <ul>
+      <li>AI зөвлөхийн хариултууд апп дотор бэлтгэгдсэн агуулга бөгөөд таны асуулт гадагш
+        илгээгддэггүй.</li>
+      <li>Апп нийтэд нээлттэй зураг болон үсгийн фонтыг (Google Fonts) интернэтээс татдаг.</li>
+      <li>Апп 13-аас доош насны хүүхдэд зориулагдаагүй.</li>
+    </ul>
+
     <h2>Холбоо барих</h2>
     <p>Асуулт байвал: <strong>me@ember.mn</strong></p>
 
     <div class="en">
       <h2>Privacy Policy (English)</h2>
-      <p><strong>The GoGlobal app does not collect, store, or share any personal data.</strong></p>
+      <p>GoGlobal uses Google <strong>Firebase</strong> (Firebase Authentication and Cloud
+      Firestore) to store your account and profile. Data is used only to provide the app's
+      features. <strong>We do not sell data, show ads or track you.</strong></p>
       <ul>
-        <li><strong>Accounts:</strong> The login/signup screens are illustrative; nothing you
-          type is transmitted to any server and no real account is created — therefore there
-          is no server-side data to delete.</li>
-        <li><strong>Profile photo:</strong> A photo you pick is used only on your device.</li>
-        <li><strong>Settings:</strong> Preferences such as dark mode are stored locally.</li>
-        <li><strong>AI advisor:</strong> Answers are pre-written content bundled with the app;
-          your questions are never sent anywhere.</li>
-        <li><strong>Network use:</strong> Only publicly available images are downloaded.</li>
-        <li><strong>Tracking / ads / analytics:</strong> None.</li>
+        <li><strong>Account:</strong> e-mail address, password (stored hashed by Firebase —
+          never visible to us) and an internal user ID.</li>
+        <li><strong>Profile (only what you enter):</strong> name, phone number, birth date,
+          place of residence, education level, school, GPA, language levels, intended major
+          and a small profile photo.</li>
+        <li><strong>App usage:</strong> saved universities, submitted applications (with the
+          details you enter), placement-test results and GG points.</li>
+        <li><strong>On your device only:</strong> theme, language, compare list and photos
+          added under “Send materials”.</li>
+        <li><strong>Purposes:</strong> sign-in and syncing your profile/points; letting a
+          GoGlobal advisor contact you about applications you submit; account e-mails
+          (password reset, verification).</li>
+        <li><strong>Sharing:</strong> Google Firebase as our storage provider (Google Cloud,
+          Seoul, South Korea) and GoGlobal advisors for your applications only. Nothing is
+          shared with universities or other third parties without your consent.</li>
+        <li><strong>Security:</strong> encrypted in transit and at rest; access rules let each
+          user read and change only their own data.</li>
+        <li><strong>Deletion:</strong> in the app go to <em>Profile → Settings → Delete
+          account</em> and confirm with your password — the account and all related data
+          (profile, points, applications, test history) are deleted immediately. You can
+          also e-mail <strong>me@ember.mn</strong>.</li>
+        <li>The AI advisor uses pre-written content; your questions are not sent anywhere.
+          The app downloads public images and fonts (Google Fonts). Not directed to children
+          under 13.</li>
       </ul>
-      <p><strong>Data deletion:</strong> all app data lives only on your device; deleting the
-      app removes it completely. Contact: <strong>me@ember.mn</strong></p>
+      <p>Contact: <strong>me@ember.mn</strong></p>
     </div>
   </div>
 
