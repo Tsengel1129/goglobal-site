@@ -14,11 +14,11 @@
   </header>
 
   <h1>Нууцлалын бодлого</h1>
-  <p class="date">Сүүлд шинэчилсэн / Last updated: 2026-09-25 (хувилбар 1.1)</p>
+  <p class="date">Сүүлд шинэчилсэн / Last updated: 2026-10-10 (хувилбар 1.2)</p>
 
   <div class="card">
-    <p>GoGlobal апп нь таны бүртгэл болон профайлыг найдвартай хадгалахын тулд
-    Google-ийн <strong>Firebase</strong> (Firebase Authentication, Cloud Firestore)
+    <p>GoGlobal апп болон go-global.mn вэб нь таны бүртгэл болон профайлыг найдвартай хадгалахын тулд
+    Google-ийн <strong>Firebase</strong> (Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions)
     үйлчилгээг ашигладаг. Мэдээллийг зөвхөн аппын үйлчилгээг үзүүлэхэд ашиглана;
     <strong>худалддаггүй, зар сурталчилгаа болон tracking хийдэггүй.</strong></p>
 
@@ -32,8 +32,19 @@
       <li><strong>Аппын ашиглалт:</strong> хадгалсан сургуулиуд, илгээсэн өргөдөл (маягтад
         оруулсан мэдээлэлтэй хамт), түвшин тогтоох тестийн дүн, GG оноо.</li>
       <li><strong>Зөвхөн таны төхөөрөмж дээр:</strong> харанхуй горим, хэл, харьцуулах
-        жагсаалт, «Материал илгээх» хэсэгт нэмсэн зургууд.</li>
+        жагсаалт.</li>
     </ul>
+
+    <h2>Материал хадгалах</h2>
+    <p>Аппын 1.2 хувилбараас «Материал илгээх» хэсэгт таны сонгож оруулсан зураг, PDF файлыг Firebase Cloud Storage-д
+    хувийн эрхтэй хадгална. Үүнд паспорт, иргэний үнэмлэх, төрсний гэрчилгээ, дүн,
+    банкны баталгаа, апостиль, эцэг эх эсвэл батлан даагчийн мэдээлэл, ажлын газрын
+    тодорхойлолт, төрөл садангийн лавлагаа багтаж болно. Бусдын баримтыг зөвшөөрөлтэйгөөр
+    оруулна уу. Баримтыг сургуульд автоматаар дамжуулахгүй.</p>
+    <p>Баримтын төрөл бүрд анхны оруулалтаар GG оноо олгоно. Файлаа устгасан ч давхар
+    оноо олгохоос сэргийлэх төрөл тус бүрийн тэмдэглэгээ бүртгэл устгах хүртэл хадгалагдана.
+    Хувь хүнийг тодорхойлохгүй нийт бүртгэлийн тоо, огноогоор нэгтгэсэн статистикийг
+    эрх бүхий админ харна.</p>
 
     <h2>Юунд ашигладаг вэ</h2>
     <ul>
@@ -59,7 +70,7 @@
     <h2>Мэдээлэл устгах</h2>
     <p>Апп доторх <strong>Профайл → Тохиргоо → Бүртгэл устгах</strong> хэсгээс нууц
     үгээ оруулж бүртгэл болон түүнтэй холбоотой бүх мэдээллийг (профайл, GG оноо,
-    өргөдөл, тестийн түүх) шууд, бүрмөсөн устгах боломжтой. Мөн <strong>hello@go-global.mn</strong>
+    өргөдөл, тестийн түүх, оруулсан баримтууд) устгах боломжтой. Вэбийн өөрийн бүртгэл дэх «Бүртгэл устгах» хэсгийг мөн ашиглаж болно. Мөн <strong>hello@go-global.mn</strong>
     хаягаар хүсэлт илгээж болно.</p>
 
     <h2>Бусад</h2>
@@ -75,8 +86,7 @@
 
     <div class="en">
       <h2>Privacy Policy (English)</h2>
-      <p>GoGlobal uses Google <strong>Firebase</strong> (Firebase Authentication and Cloud
-      Firestore) to store your account and profile. Data is used only to provide the app's
+      <p>GoGlobal mobile apps and go-global.mn use Google <strong>Firebase</strong> (Firebase Authentication, Cloud Firestore, Cloud Storage and Cloud Functions) to store your account and profile. Data is used only to provide the app's
       features. <strong>We do not sell data, show ads or track you.</strong></p>
       <ul>
         <li><strong>Account:</strong> e-mail address, password (stored hashed by Firebase —
@@ -86,8 +96,14 @@
           and a small profile photo.</li>
         <li><strong>App usage:</strong> saved universities, submitted applications (with the
           details you enter), placement-test results and GG points.</li>
-        <li><strong>On your device only:</strong> theme, language, compare list and photos
-          added under “Send materials”.</li>
+        <li><strong>On your device only:</strong> theme, language and compare list.</li>
+        <li><strong>Private documents (app version 1.2 onward):</strong> images and PDFs you choose to upload, including identification,
+          passport, birth certificate, transcripts, bank proof, apostille, family/sponsor names,
+          relationships, identification and employment certificates, are stored privately in Cloud Storage.
+          Obtain consent before uploading another person's documents. Files are not automatically sent to universities.
+          A first-upload reward marker per document type remains until account deletion, even if the file is removed.</li>
+        <li><strong>Administration:</strong> authorized admins see aggregate registration counts and periods;
+          the dashboard does not expose individual users' personal records.</li>
         <li><strong>Purposes:</strong> sign-in and syncing your profile/points; letting a
           GoGlobal advisor contact you about applications you submit; account e-mails
           (password reset, verification).</li>
@@ -98,7 +114,7 @@
           user read and change only their own data.</li>
         <li><strong>Deletion:</strong> in the app go to <em>Profile → Settings → Delete
           account</em> and confirm with your password — the account and all related data
-          (profile, points, applications, test history) are deleted immediately. You can
+          (profile, points, applications, test history and uploaded documents) are deleted. The web account page also provides account deletion. You can
           also e-mail <strong>hello@go-global.mn</strong>.</li>
         <li>The AI advisor uses pre-written content; your questions are not sent anywhere.
           The app downloads public images and fonts (Google Fonts). Not directed to children
